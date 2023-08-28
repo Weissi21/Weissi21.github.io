@@ -1,0 +1,224 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    min-height: 100vh;
+    background: linear-gradient(#12314c, #08162b);   
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url('../image/art.png') center/cover no-repeat;
+    height: 100vh; 
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo
+{
+  position: absolute;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  
+}
+header ul
+{
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 10px 0;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 10px;
+}
+header ul li a 
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    color: #000;
+}
+.logo-Image
+{
+  max-width: 50%; /* Adjust this value to control image size */
+  height: auto;
+  position: absolute;
+  top: 12%;
+  transform: translateY(-50%);
+  left: 0px; /* Adjust this value to control image's left position */
+  
+}
+.fixed-image
+{
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Bildschirmhöhe */
+  overflow: hidden; /* Versteckt den überflüssigen Teil des Bildes */
+}
+.fixed-image img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+.fixed-image-bottom
+{
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Bildschirmhöhe */
+  overflow: show; 
+}
+.fixed-image-bottom img
+{
+  position: absolute;
+  top: 100;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.gallery-container 
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  width: 94%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.gallery-item {
+  flex-basis: 32.7%;
+  margin-bottom: 6px;
+  opacity: .85;
+  cursor: pointer;
+}
+.gallery-item:hover {
+  opacity: 1;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery-content {
+  font-size: .8em;
+}
+
+.lightbox {
+  position: fixed;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  top: 120%;
+  left: 0;
+}
+.lightbox-content {
+  position: relative;
+  width: 65%;
+  height: 58%;
+
+  margin: 5% auto;
+  margin-top: 100px;
+}
+.lightbox-content img {
+  width: 100%;
+  height: 125%;
+  object-fit: contain;
+  
+}
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  top: 62.5%;
+  cursor: pointer;
+}
+.lightbox-prev {
+  left: 17.6%;
+}
+.lightbox-next {
+  right: 17.6%;
+}
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  opacity: .8;
+}
+
+@media (max-width: 767px) {
+  .gallery-container {
+      width: 100%;
+  }
+  .gallery-item {
+      flex-basis: 49.80%;
+      margin-bottom: 3px;
+  }
+  .lightbox-content {
+      width: 80%;
+      height: 60%;
+      margin: 15% auto;
+  }
+}
+@media (max-width: 480px) {
+  .gallery-item {
+      flex-basis: 100%;
+      margin-bottom: 1px;
+  }
+  .lightbox-content {
+      width: 90%;
+      margin: 20% auto;
+  }
+}
+#footer { height:540px; background:url(images/footer.jpg) repeat-x center 0; color:#fff; }
+#footer h3{ padding-bottom:5px; }
+#footer .left{ width:550px; }
+#footer .right{ width:350px; }
+#footer p{ padding-bottom:15px; }
+#footer p.copy{ background:url(images/copy.gif) no-repeat center 0; font-size:11px; color:#fff; text-align: center; padding-top:8px; margin-top:25px;}
+#footer p.copy a{ color:#fff; }
+
+#footer .shell{ padding:15px 0; }
+h2
+{
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-size: 500%; 
+  font-family: "Arial", sans-serif; 
+  
+}
